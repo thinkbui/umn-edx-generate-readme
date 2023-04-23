@@ -12,7 +12,17 @@ function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
-  console.log(generateMarkdown({"title":"TEST"}));
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Please enter the title of your project: ",
+        name: "title"
+      }
+    ])
+    .then((response) =>
+      console.log(generateMarkdown(response))
+    );
 }
 
 // Function call to initialize app
