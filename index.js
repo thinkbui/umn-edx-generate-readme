@@ -22,6 +22,9 @@ function init() {
     ])
     .then((response) =>
       console.log(generateMarkdown(response))
+      // fs.writeFile('OUTPUT.md', generateMarkdown(response), (err) =>
+      //   err ? console.error(err) : console.log('Success!')
+      // )
     );
 }
 
