@@ -3,19 +3,19 @@ const licenses = {
     "text": "GNU GPL v3.",
     "link": "https://www.gnu.org/licenses/gpl-3.0",
     "badge": "https://img.shields.io/badge/License-GPLv3-blue.svg",
-    "alt": "License: GPL v3"
+    "alt": "GPL v3"
   },
   "MIT":{
     "text": "the MIT License.",
     "link": "https://opensource.org/licenses/MIT",
     "badge": "https://img.shields.io/badge/License-MIT-yellow.svg",
-    "alt": "License: MIT"
+    "alt": "MIT"
   },
   "Mozilla":{
     "text": "Mozilla Public License 2.0.",
     "link": "https://opensource.org/licenses/MPL-2.0",
     "badge": "https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg",
-    "alt": "License: MPL 2.0"
+    "alt": "MPL 2.0"
   }
 }
 
@@ -56,7 +56,10 @@ function getLicenseData(license) {
 }
 
 function buildLicenseBadge(license) {
-  return license
+  if (!license || license == "(none)"){
+    return ""
+  }
+  return `\n[![License: ${renderLicenseAlt(license)}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})\n`
 }
 
 // TODO: Create a function that returns the license section of README
@@ -74,7 +77,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+${buildLicenseBadge(data.license)}
 ## DESCRIPTION
 ${data.description}
 ${renderTableOfContents(data)}
