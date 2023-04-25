@@ -14,6 +14,8 @@ This project is built with Node.JS.  You will need to have that installed before
 ## NOTES
 The prompts use the Inquirer.JS package and asks sequentially.  With the exception of *Table of Contents*, all sections are to be displayed.  Perhaps in the future, the prompts could be updated to include the ability to skip certain sections (ex. *Installation* for an HTML/CSS project), but for now any undesired sections should be removed manually from the output.
 
+If no license is selected, neither a badge nor the license section will be rendered.  Also the selection of licenses is currently limited, but that can be expanded later.
+
 ## DEMOS
 Below are animations demonstrating the usage of this project.  They are also available as WEBM videos in this repository.
 
