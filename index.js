@@ -49,6 +49,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please enter your email address:",
+    name: "email"
+  },
+  {
+    type: "input",
     message: "Please enter your project's testing instructions:",
     name: "testing"
   },
