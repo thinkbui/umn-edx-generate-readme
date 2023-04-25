@@ -118,4 +118,4 @@ ${data.testing}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown, licenses};

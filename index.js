@@ -35,7 +35,7 @@ const questions = [
     type: "list",
     message: "Select your project's license:",
     name: "license",
-    choices: ["(none)", "GNU GPL v3", "MIT", "Mozilla"]
+    choices: ["(none)", ...Object.keys(generateMarkdown.licenses)]
   },
   {
     type: "input",
@@ -76,7 +76,7 @@ function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      let generated_content = generateMarkdown(response)
+      let generated_content = generateMarkdown.generateMarkdown(response)
       if (response.output_to_file) {
         console.log(`Generating output file (${output_filename}).`)
         writeToFile(output_filename, generated_content)
