@@ -44,6 +44,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please enter your GitHub name:",
+    name: "github"
+  },
+  {
+    type: "input",
     message: "Please enter your project's testing instructions:",
     name: "testing"
   }
@@ -59,9 +64,9 @@ function init() {
     .then((response) => {
       console.log(response)
       console.log(generateMarkdown(response))
-      // fs.writeFile('OUTPUT.md', generateMarkdown(response), (err) =>
-      //   err ? console.error(err) : console.log('Success!')
-      // )
+      fs.writeFile('OUTPUT.md', generateMarkdown(response), (err) =>
+        err ? console.error(err) : console.log('Success!')
+      )
     });
 }
 
