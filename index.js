@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const output_filename = "OUTPUT.md";
 
 // TODO: Include packages needed for this application
 
@@ -51,11 +52,20 @@ const questions = [
     type: "input",
     message: "Please enter your project's testing instructions:",
     name: "testing"
+  },
+  {
+    type: "confirm",
+    message: "Output to file?:",
+    name: "output_to_file"
   }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success!')
+  )
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -63,10 +73,14 @@ function init() {
     .prompt(questions)
     .then((response) => {
       console.log(response)
-      console.log(generateMarkdown(response))
-      fs.writeFile('OUTPUT.md', generateMarkdown(response), (err) =>
-        err ? console.error(err) : console.log('Success!')
-      )
+      let generated_content = generateMarkdown(response)
+      if (response.output_to_file) {
+        console.log(`Generating output file (${output_filename}).`)
+        writeToFile(output_filename, generated_content)
+      } else {
+        console.log("New README contents:")
+        console.log(generated_content)
+      }
     });
 }
 
