@@ -11,3 +11,8 @@ This project is built with Node.JS.  You will need to have that installed before
 
 ## NOTES
 The prompts use the Inquirer.JS package and asks sequentially.  With the exception of *Table of Contents*, all sections are to be displayed.  Perhaps in the future, the prompts could be updated to include the ability to skip certain sections (ex. *Installation* for an HTML/CSS project), but for now any undesired sections should be removed manually from the output.
+
+## VIDEOS
+[Usage #1](./assets/videos/umn-edx-generate-readme-1.webm)
+
+[Usage #2](./assets/videos/umn-edx-generate-readme-2.webm)
