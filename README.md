@@ -16,7 +16,9 @@ The prompts use the Inquirer.JS package and asks sequentially.  With the excepti
 Below are animations demonstrating the usage of this project.  They are also available as WEBM videos in this repository.
 
 Generating to file:
+
 ![Usage #1](./assets/images/umn-edx-generate-readme-1.gif)
 
 Generating to console:
+
 ![Usage #2](./assets/images/umn-edx-generate-readme-2.gif)
