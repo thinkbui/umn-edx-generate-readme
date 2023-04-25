@@ -18,3 +18,7 @@ Below are links to the demo videos.  You can download them to view.
 [Usage #1](./assets/videos/umn-edx-generate-readme-1.webm)
 
 [Usage #2](./assets/videos/umn-edx-generate-readme-2.webm)
+
+https://github.com/thinkbui/umn-edx-generate-readme/blob/video_links/assets/videos/umn-edx-generate-readme-1.webm
+
+https://github.com/thinkbui/umn-edx-generate-readme/blob/video_links/assets/videos/umn-edx-generate-readme-2.webm
