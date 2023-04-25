@@ -1,3 +1,4 @@
+// License data
 const licenses = {
   "GNU GPL v3":{
     "text": "GNU GPL v3.",
@@ -19,6 +20,7 @@ const licenses = {
   }
 }
 
+// Helper to fetch display text for license
 function renderLicenseText(license) {
   if (!license){
     return ""
@@ -26,8 +28,7 @@ function renderLicenseText(license) {
   return getLicenseData(license)["text"]
 }
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Helper to fetch badge url for license
 function renderLicenseBadge(license) {
   if (!license){
     return ""
@@ -35,8 +36,7 @@ function renderLicenseBadge(license) {
   return getLicenseData(license)["badge"]
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Helper to fetch link url for license
 function renderLicenseLink(license) {
   if (!license){
     return ""
@@ -44,6 +44,7 @@ function renderLicenseLink(license) {
   return getLicenseData(license)["link"]
 }
 
+// Helper to fetch alt badge text for license
 function renderLicenseAlt(license) {
   if (!license){
     return ""
@@ -51,10 +52,12 @@ function renderLicenseAlt(license) {
   return getLicenseData(license)["alt"]
 }
 
+// Helper to fetch license data
 function getLicenseData(license) {
   return licenses[license]
 }
 
+// Helper to build the full display badge for license
 function buildLicenseBadge(license) {
   if (!license || license == "(none)"){
     return ""
@@ -62,8 +65,7 @@ function buildLicenseBadge(license) {
   return `\n[![License: ${renderLicenseAlt(license)}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})\n`
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Helper to build the license section including the appropriate link
 function renderLicenseSection(license) {
   if (!license || license == '(none)') {
     return ""
@@ -74,7 +76,25 @@ function renderLicenseSection(license) {
   return section_string
 }
 
-// TODO: Create a function to generate markdown for README
+// Helper to build the table of contents section
+function renderTableOfContents(data) {
+  if (!data.show_table_of_contents) {
+    return ""
+  }
+  let content_string = "\n## TABLE OF CONTENTS\n"
+  content_string += "- [Installation](#INSTALLATION)\n"
+  content_string += "- [Usage](#USAGE)\n"
+  if (data.license && getLicenseData(data.license)) {
+    content_string += "- [License](#LICENSE)\n"
+  }
+  content_string += "- [Contributing](#CONTRIBUTING)\n"
+  content_string += "- [Questions](#QUESTIONS)\n"
+  content_string += "- [Tests](#TESTS)\n"
+
+  return content_string
+}
+
+// This the main generator function to build the README content
 function generateMarkdown(data) {
   return `# ${data.title}
 ${buildLicenseBadge(data.license)}
@@ -96,23 +116,6 @@ Visit my [GitHub page](https://github.com/${data.github}/) for more information.
 ## TESTS
 ${data.testing}
 `;
-}
-
-function renderTableOfContents(data) {
-  if (!data.show_table_of_contents) {
-    return ""
-  }
-  let content_string = "\n## TABLE OF CONTENTS\n"
-  content_string += "- [Installation](#INSTALLATION)\n"
-  content_string += "- [Usage](#USAGE)\n"
-  if (data.license && getLicenseData(data.license)) {
-    content_string += "- [License](#LICENSE)\n"
-  }
-  content_string += "- [Contributing](#CONTRIBUTING)\n"
-  content_string += "- [Questions](#QUESTIONS)\n"
-  content_string += "- [Tests](#TESTS)\n"
-
-  return content_string
 }
 
 module.exports = generateMarkdown;
