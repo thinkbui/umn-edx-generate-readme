@@ -111,7 +111,7 @@ ${renderLicenseSection(data.license)}
 ${data.contributing}
 
 ## QUESTIONS
-Visit my [GitHub page](https://github.com/${data.github}/) for more information.
+Visit my [GitHub page](https://github.com/${data.github}/) or [email me](mailto:${data.email}) for questions and more information.
 
 ## TESTS
 ${data.testing}
