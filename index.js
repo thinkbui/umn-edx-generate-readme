@@ -71,7 +71,6 @@ function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      console.log(response)
       let generated_content = generateMarkdown(response)
       if (response.output_to_file) {
         console.log(`Generating output file (${output_filename}).`)
