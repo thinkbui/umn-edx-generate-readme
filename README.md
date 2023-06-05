@@ -17,12 +17,10 @@ The prompts use the Inquirer.JS package and asks sequentially.  With the excepti
 If no license is selected, neither a badge nor the license section will be rendered.  Also the selection of licenses is currently limited, but that can be expanded later.
 
 ## DEMOS
-Below are animations demonstrating the usage of this project.  They are also available as WEBM videos in this repository.
+Below are links to videos demonstrating the usage of this project.  They are also available as WEBM videos and GIF animations in this repository.
 
-Generating to file:
+[Generating to file](https://www.youtube.com/watch?v=wrKO0HJLGvg)
 
-![Usage #1](./assets/images/umn-edx-generate-readme-1.gif)
+[Generating to console](https://www.youtube.com/watch?v=b-qo3kvrpnk)
 
-Generating to console:
-
-![Usage #2](./assets/images/umn-edx-generate-readme-2.gif)
+[Example output](./EXAMPLE_OUTPUT.md)
