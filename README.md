@@ -19,8 +19,8 @@ If no license is selected, neither a badge nor the license section will be rende
 ## DEMOS
 Below are links to videos demonstrating the usage of this project.  They are also available as WEBM videos and GIF animations in this repository.
 
-[Generating to file](https://www.youtube.com/watch?v=wrKO0HJLGvg)
+[Generating to File](https://www.youtube.com/watch?v=wrKO0HJLGvg)
 
-[Generating to console](https://www.youtube.com/watch?v=b-qo3kvrpnk)
+[Generating to Console](https://www.youtube.com/watch?v=b-qo3kvrpnk)
 
-[Example output](./EXAMPLE_OUTPUT.md)
+[Example Output](./EXAMPLE_OUTPUT.md)
