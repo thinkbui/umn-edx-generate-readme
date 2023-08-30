@@ -24,3 +24,5 @@ Below are links to videos demonstrating the usage of this project.  They are als
 [Generating to Console](https://www.youtube.com/watch?v=b-qo3kvrpnk)
 
 [Example Output](./EXAMPLE_OUTPUT.md)
+
+![Screenshot](./assets/images/maxresdefault.jpg)
